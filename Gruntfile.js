@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 	    compile: {
         options: {
           sassDir: 'scss',
-          cssDir: 'css',
+          cssDir: 'src/css',
           specify: 'scss/*.scss'
         }
       }
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         expand: true,
         flatten: true,
         src: ['scss/*.scss'],
-        dest: 'css/',
+        dest: 'src/css/',
         ext: '.css'
       }
     },
@@ -46,10 +46,19 @@ module.exports = function(grunt) {
         dest: 'docs'
       }
     },
+
     clean: {
       styleguide: [
         '<%= styleguide.styledocco.dest %>'
       ]
+    },
+
+    uglify: {
+      my_target: {
+        files: {
+          'js/app.min.js': ['src/js/*.js']
+        }
+      }
     },
 
     watch: {
@@ -57,6 +66,11 @@ module.exports = function(grunt) {
         files: ['scss/*.scss'],
         tasks: ['compass']
       },
+
+      javascript: {
+        files: ['src/js/*.js'],
+        tasks: ['uglify']
+      }
     },
 
   });
@@ -69,5 +83,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
 };
