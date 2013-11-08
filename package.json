@@ -1,7 +1,7 @@
 {
-  "name": "twicolle",
+  "name": "Project Name",
   "version": "0.0.1",
-  "author": "Masaaki Morishita",
+  "author": "Masaaki Morishita <ikasama3.0@gmail.com>",
   "license": "BSD",
   "devDependencies": {
     "grunt": "~0.4.1",
