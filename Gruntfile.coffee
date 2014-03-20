@@ -27,6 +27,12 @@ module.exports = (grunt) ->
         files:
           "src/stylesheets/*.scss": ["src/stylesheets/*.scss"]
 
+    csslint:
+      dist:
+        options:
+          csslintrc: '.csslintrc'
+        src: ['build/css/app.css']
+
     csso:
       dist:
         files:
@@ -49,6 +55,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-csso"
   grunt.loadNpmTasks "grunt-kss"
   grunt.loadNpmTasks "grunt-uncss"
+
   grunt.registerTask "default", ["develop"]
   grunt.registerTack "develop", [
     "connect:app"
@@ -57,6 +64,7 @@ module.exports = (grunt) ->
   grunt.registerTask "stylesheet", [
     "compass"
     "csscomb"
+    "csslint"
   ]
   grunt.registerTack "publish", [
     "stylesheet"
