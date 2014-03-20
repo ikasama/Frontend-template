@@ -1,19 +1,19 @@
 {
-  "name": "Project Name",
+  "name": "my-gruntfile",
   "version": "0.0.1",
   "author": "Masaaki Morishita <ikasama3.0@gmail.com>",
-  "license": "BSD",
+  "license": "MIT",
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-watch": "*",
-    "grunt-contrib-cssmin": "*",
     "grunt-contrib-sass": "*",
     "grunt-contrib-compass": "*",
-    "grunt-contrib-stylus": "*",
     "grunt-contrib-csslint": "*",
-    "grunt-styleguide": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-contrib-coffee": "*"
-    "grunt-contrib-uglify": "*"
+    "grunt-csso": "*",
+    "grunt-csscss": "*",
+    "grunt-csscomb": "*",
+    "grunt-uncss": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-kss": "*",
   }
 }
