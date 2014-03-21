@@ -50,14 +50,13 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-compass"
   grunt.loadNpmTasks "grunt-contrib-csslint"
   grunt.loadNpmTasks "grunt-contrib-watch"
-  grunt.loadNpmTasks "grunt-csscss"
   grunt.loadNpmTasks "grunt-csscomb"
   grunt.loadNpmTasks "grunt-csso"
   grunt.loadNpmTasks "grunt-kss"
   grunt.loadNpmTasks "grunt-uncss"
 
   grunt.registerTask "default", ["develop"]
-  grunt.registerTack "develop", [
+  grunt.registerTask "develop", [
     "connect:app"
     "watch"
   ]
@@ -66,13 +65,13 @@ module.exports = (grunt) ->
     "csscomb"
     "csslint"
   ]
-  grunt.registerTack "publish", [
+  grunt.registerTask "publish", [
     "stylesheet"
     "kss"
     "connect:doc"
     "watch"
   ]
-  grunt.registerTack "build", [
+  grunt.registerTask "build", [
     "stylesheet"
     "csso"
   ]
