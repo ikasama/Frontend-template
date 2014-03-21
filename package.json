@@ -4,6 +4,7 @@
   "author": "Masaaki Morishita <ikasama3.0@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "coffee-script": "*",
     "grunt": "*",
     "grunt-contrib-connect": "*",
     "grunt-contrib-watch": "*",

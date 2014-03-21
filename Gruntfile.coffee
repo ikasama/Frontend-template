@@ -38,6 +38,16 @@ module.exports = (grunt) ->
         files:
           "build/css/app.min.css": ["build/css/app.css"]
 
+###
+    kss:
+      options:
+        includeType: 'css'
+        includePath: 'build/files/css/maple.css'
+        template: 'doc/template'
+      dist:
+        files:
+          'doc/': ['src/stylesheets/']
+###
     watch:
       options:
         livereload: true
@@ -65,12 +75,14 @@ module.exports = (grunt) ->
     "csscomb"
     "csslint"
   ]
+###
   grunt.registerTask "publish", [
     "stylesheet"
     "kss"
     "connect:doc"
     "watch"
   ]
+###
   grunt.registerTask "build", [
     "stylesheet"
     "csso"
