@@ -13,6 +13,6 @@
     "grunt-csscomb": "*",
     "grunt-csso": "*",
     "grunt-uncss": "*",
-    "grunt-kss": "*",
+    "grunt-kss": "*"
   }
 }
