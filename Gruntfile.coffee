@@ -87,4 +87,3 @@ module.exports = (grunt) ->
     "stylesheet"
     "csso"
   ]
-  return
